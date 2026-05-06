@@ -81,3 +81,5 @@ To clean up:
 ```
 docker compose down
 ```
+
+# CI test trigger 2026-05-06
