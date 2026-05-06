@@ -8,7 +8,7 @@ metadata:
 spec:
   project: retail-store
   source:
-    repoURL: https://github.com/arumullayaswanth/k8s-microservices-ecommerce-app
+    repoURL: https://github.com/Amgbillion/k8s-microservices-ecommerce-app
     targetRevision: gitops
     path: src/ui/chart
     helm:
