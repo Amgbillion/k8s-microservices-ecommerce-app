@@ -148,6 +148,12 @@ resource "helm_release" "kube_prometheus_stack" {
             "service.beta.kubernetes.io/aws-load-balancer-name"   = "${var.cluster_name}-grafana"
           }
         }
+        # Disable auto-injection of default datasources (avoids duplicate isDefault conflict)
+        sidecar = {
+          datasources = {
+            defaultDatasourceEnabled = false
+          }
+        }
         # Pre-configure Prometheus datasource
         datasources = {
           "datasources.yaml" = {
